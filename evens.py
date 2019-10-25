@@ -23,7 +23,7 @@ def even_number_of_evens(numbers):
     # Iterate of over each item and if it's an even number, increment the
     # `evens` variable
     evens = sum([1 for n in numbers if is_even(n)])
-    return False if evens == 0 else is_even(evens)
+    return False if evens == 0 else is_even(evens) # these could both return false. If evens is 1 then is_even(evens) will return false (as seen with 2nd test case).
 
 # Our set of test cases
 assert even_number_of_evens([]) == False, "No numbers"
